@@ -22,29 +22,46 @@ public class CategoriesClient {
         this.objectMapper = new ObjectMapper();
     }
 
-    public List<Category> getCategoriesList() throws IOException {
+    public List<Category> getCategoriesList()  {
         Response categoriesResponse = getCategoriesResponse();
         assertEquals(200, categoriesResponse.statusCode(), "Request returned incorrect status code");
-        return this.objectMapper.readValue(new JSONReader().getFixedCollectionJson(categoriesResponse, "$..categories"), new TypeReference<List<Category>>() {
-        });
+        List<Category> categoriesList = null;
+        try {
+            categoriesList = this.objectMapper.readValue(new JSONReader().getFixedCollectionJson(categoriesResponse, "$..categories"), new TypeReference<List<Category>>() {
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return categoriesList;
     }
 
-    public Category getCategoryById(String id, int expectedStatusCode) throws IOException {
+    public Category getCategoryById(String id, int expectedStatusCode) {
         Category category = null;
         Response categoryResponse = getCategoryByIdResponse(id);
         assertEquals(expectedStatusCode, categoryResponse.statusCode(), "Request returned incorrect status code");
         if (expectedStatusCode == 200) {
-            category = this.objectMapper.readValue(categoryResponse.body().asString(), new TypeReference<Category>() {
-            });
+            try {
+                category = this.objectMapper.readValue(categoryResponse.body().asString(), new TypeReference<Category>() {
+                });
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         return category;
     }
 
-    public List<Parameters> getParametersList(String categoryId) throws IOException {
+    public List<Parameters> getParametersList(String categoryId) {
         Response parametersResponse = getCategoryParametersResponse(categoryId);
         assertEquals(200, parametersResponse.statusCode(), "Request returned incorrect status code");
-        return this.objectMapper.readValue(new JSONReader().getFixedCollectionJson(parametersResponse, "$..parameters"), new TypeReference<List<Parameters>>() {
-        });
+        List<Parameters> parametersList = null;
+        try {
+            parametersList = this.objectMapper.readValue(new JSONReader().getFixedCollectionJson(parametersResponse, "$..parameters"), new TypeReference<List<Parameters>>() {
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+        return parametersList;
     }
 
     private Response getCategoriesResponse() {
