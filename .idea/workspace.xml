@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e86c2fc8-8684-4fe1-a913-04b1d0cc49c2" name="Default" comment="" />
+    <list default="true" id="e86c2fc8-8684-4fe1-a913-04b1d0cc49c2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../AllegroRecrutationTask/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../AllegroRecrutationTask/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AllegroRecrutationTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AllegroRecrutationTask/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AllegroRecrutationTask/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../AllegroRecrutationTask/README.md" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoriesTests.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CategoriesTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../AllegroRecrutationTask/src/test/java/Tests/CategoriesTests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+              <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,14 +38,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parameters.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../AllegroRecrutationTask/src/test/java/Models/Category/Parameters.java">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../AllegroRecrutationTask/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../AllegroRecrutationTask/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -61,8 +71,8 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../AllegroRecrutationTask/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -110,18 +120,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../AllegroRecrutationTask/src/test/java/Tests/BaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,6 +187,8 @@
         <option value="$PROJECT_DIR$/../AllegroRecrutationTask/pom.xml" />
         <option value="$PROJECT_DIR$/../AllegroRecrutationTask/src/test/java/Endpoints/AuthenticationClient.java" />
         <option value="$PROJECT_DIR$/../AllegroRecrutationTask/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/../AllegroRecrutationTask/README.md" />
+        <option value="$PROJECT_DIR$/../AllegroRecrutationTask/.gitignore" />
       </list>
     </option>
   </component>
@@ -211,6 +211,11 @@
             <path>
               <item name="AllegroRecrutationTask" type="b2602c69:ProjectViewProjectNode" />
               <item name="AllegroRecrutationTask" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AllegroRecrutationTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllegroRecrutationTask" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AllegroRecrutationTask" type="b2602c69:ProjectViewProjectNode" />
@@ -534,6 +539,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Key Promoter X" order="3" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -923,13 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../AllegroRecrutationTask/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../AllegroRecrutationTask/src/test/java/configuration/ConfigurationProperties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -960,10 +959,31 @@
     <entry file="file://$PROJECT_DIR$/../AllegroRecrutationTask/src/test/java/Tests/CategoriesTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AllegroRecrutationTask/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AllegroRecrutationTask/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AllegroRecrutationTask/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
         </state>
       </provider>
     </entry>
