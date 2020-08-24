@@ -11,7 +11,7 @@ Project is created with:
 ## Running tests
 Make sure that the authorization.key value in application.properties file is set. Test will not work properly without it.
 In order to generate it, you should register your application here: https://apps.developer.allegro.pl/new, then set your authorization.key in format just as below:
-<ClientId>:<ClientSecret>
+ClientId:ClientSecret
 Colon should be also included.
 
 Remember to enable Lombok in your IDE.
