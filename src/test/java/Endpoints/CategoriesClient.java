@@ -1,8 +1,8 @@
-package endpoints;
+package Endpoints;
 
 import assertions.RequestAssertions;
-import models.category.Category;
-import models.category.Parameters;
+import Models.Category.Category;
+import Models.Category.Parameters;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import configuration.ConfigurationProperties;

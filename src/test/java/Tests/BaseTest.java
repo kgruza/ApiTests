@@ -1,6 +1,6 @@
-package tests;
+package Tests;
 
-import endpoints.AuthenticationClient;
+import Endpoints.AuthenticationClient;
 import configuration.ConfigurationProperties;
 import configuration.PropertiesLoader;
 import org.junit.jupiter.api.BeforeAll;

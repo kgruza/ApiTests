@@ -1,4 +1,4 @@
-package endpoints;
+package Endpoints;
 
 import assertions.RequestAssertions;
 import com.jayway.jsonpath.JsonPath;

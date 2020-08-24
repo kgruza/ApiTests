@@ -1,9 +1,9 @@
-package tests;
+package Tests;
 
 import configuration.ConfigurationProperties;
-import endpoints.CategoriesClient;
-import models.category.Category;
-import models.category.Parameters;
+import Endpoints.CategoriesClient;
+import Models.Category.Category;
+import Models.Category.Parameters;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;

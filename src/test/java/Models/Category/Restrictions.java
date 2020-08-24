@@ -1,4 +1,4 @@
-package models.category;
+package Models.Category;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;

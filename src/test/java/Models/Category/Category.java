@@ -1,4 +1,4 @@
-package models.category;
+package Models.Category;
 
 import lombok.Data;
 
