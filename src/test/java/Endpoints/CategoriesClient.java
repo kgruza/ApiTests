@@ -1,7 +1,8 @@
-package Endpoints;
+package endpoints;
 
-import Models.Category.Category;
-import Models.Category.Parameters;
+import assertions.RequestAssertions;
+import models.category.Category;
+import models.category.Parameters;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import configuration.ConfigurationProperties;
@@ -13,21 +14,22 @@ import utils.JSONReader;
 import java.io.IOException;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class CategoriesClient {
     private ObjectMapper objectMapper;
+    private final String EXPECTED_CONTENT_TYPE = "application/vnd.allegro.public.v1+json";
 
     public CategoriesClient() {
         this.objectMapper = new ObjectMapper();
     }
 
-    public List<Category> getCategoriesList()  {
+    public List<Category> getCategoriesList() {
         Response categoriesResponse = getCategoriesResponse();
-        assertEquals(200, categoriesResponse.statusCode(), "Request returned incorrect status code");
+        RequestAssertions.assertStatusCode(categoriesResponse, 200);
+//        RequestAssertions.assertContentType(categoriesResponse, EXPECTED_CONTENT_TYPE);
         List<Category> categoriesList = null;
         try {
-            categoriesList = this.objectMapper.readValue(new JSONReader().getFixedCollectionJson(categoriesResponse, "$..categories"), new TypeReference<List<Category>>() {
+            categoriesList = this.objectMapper.readValue(JSONReader.
+                    getFixedCollectionJson(categoriesResponse, "$..categories"), new TypeReference<List<Category>>() {
             });
         } catch (IOException e) {
             e.printStackTrace();
@@ -38,10 +40,12 @@ public class CategoriesClient {
     public Category getCategoryById(String id, int expectedStatusCode) {
         Category category = null;
         Response categoryResponse = getCategoryByIdResponse(id);
-        assertEquals(expectedStatusCode, categoryResponse.statusCode(), "Request returned incorrect status code");
+        RequestAssertions.assertStatusCode(categoryResponse, expectedStatusCode);
         if (expectedStatusCode == 200) {
+//            RequestAssertions.assertContentType(categoryResponse, EXPECTED_CONTENT_TYPE);
             try {
-                category = this.objectMapper.readValue(categoryResponse.body().asString(), new TypeReference<Category>() {
+                category = this.objectMapper.readValue(categoryResponse
+                        .body().asString(), new TypeReference<Category>() {
                 });
             } catch (IOException e) {
                 e.printStackTrace();
@@ -52,10 +56,12 @@ public class CategoriesClient {
 
     public List<Parameters> getParametersList(String categoryId) {
         Response parametersResponse = getCategoryParametersResponse(categoryId);
-        assertEquals(200, parametersResponse.statusCode(), "Request returned incorrect status code");
+        RequestAssertions.assertStatusCode(parametersResponse, 200);
+//        RequestAssertions.assertContentType(parametersResponse, EXPECTED_CONTENT_TYPE);
         List<Parameters> parametersList = null;
         try {
-            parametersList = this.objectMapper.readValue(new JSONReader().getFixedCollectionJson(parametersResponse, "$..parameters"), new TypeReference<List<Parameters>>() {
+            parametersList = this.objectMapper.readValue(JSONReader
+                    .getFixedCollectionJson(parametersResponse, "$..parameters"), new TypeReference<List<Parameters>>() {
             });
         } catch (IOException e) {
             e.printStackTrace();
@@ -80,11 +86,12 @@ public class CategoriesClient {
         RestAssured.baseURI = ConfigurationProperties.getProperties().getProperty("api.base.url");
         return RestAssured
                 .given()
-                .header("Accept", "application/vnd.allegro.public.v1+json")
+//                .config(RestAssured.config()
+//                        .encoderConfig(encoderConfig().appendDefaultContentCharsetToContentTypeIfUndefined(false)))
+                .header("Accept", EXPECTED_CONTENT_TYPE)
                 .header("Accept-Language", "en-US")
                 .auth()
                 .oauth2(ConfigurationProperties.getProperties().getProperty("access.token"))
-
                 .when();
     }
 }
